@@ -1,5 +1,5 @@
 
-local lib, oldminor = LibStub:NewLibrary("tekKonfig-Scroll", 3)
+local lib, oldminor = LibStub:NewLibrary("tekKonfig-Scroll", 4)
 if not lib then return end
 
 lib.bg = {
@@ -70,7 +70,7 @@ function lib.new(parent, offset, step)
 		if value == max then down:Disable() else down:Enable() end
 	end)
 
-	local border = CreateFrame("Frame", nil, f)
+	local border = CreateFrame("Frame", nil, f, BackdropTemplateMixin and "BackdropTemplate")
 	border:SetPoint("TOPLEFT", up, -5, 5)
 	border:SetPoint("BOTTOMRIGHT", down, 5, -3)
 	border:SetBackdrop(lib.bg)
