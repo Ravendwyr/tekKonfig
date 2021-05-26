@@ -1,5 +1,5 @@
 
-local lib, oldminor = LibStub:NewLibrary("tekKonfig-Group", 2)
+local lib, oldminor = LibStub:NewLibrary("tekKonfig-Group", 3)
 if not lib then return end
 
 lib.bg = {
@@ -15,7 +15,7 @@ lib.bg = {
 -- Creates a background box to place behind widgets for visual grouping.
 -- All args optional, parent highly recommended
 function lib.new(parent, label, ...)
-	local box = CreateFrame('Frame', nil, parent)
+	local box = CreateFrame('Frame', nil, parent, BackdropTemplateMixin and "BackdropTemplate")
 	box:SetBackdrop(lib.bg)
 	box:SetBackdropBorderColor(0.4, 0.4, 0.4)
 	box:SetBackdropColor(0.1, 0.1, 0.1)
