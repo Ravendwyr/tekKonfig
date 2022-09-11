@@ -1,5 +1,5 @@
 
-local lib, oldminor = LibStub:NewLibrary("tekKonfig-AboutPanel", 5)
+local lib, oldminor = LibStub:NewLibrary("tekKonfig-AboutPanel", 6)
 if not lib then return end
 
 
@@ -75,7 +75,7 @@ function lib.OnShow(frame)
 	local subtitle = frame:CreateFontString(nil, "ARTWORK", "GameFontHighlightSmall")
 	subtitle:SetHeight(32)
 	subtitle:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 0, -8)
-	subtitle:SetPoint("RIGHT", parent, -32, 0)
+	subtitle:SetPoint("RIGHT", title, -32, 0)
 	subtitle:SetNonSpaceWrap(true)
 	subtitle:SetJustifyH("LEFT")
 	subtitle:SetJustifyV("TOP")
